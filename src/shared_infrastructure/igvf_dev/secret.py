@@ -22,6 +22,6 @@ class PortalCredentials(Construct):
         super().__init__(scope, construct_id, **kwargs)
         self.indexing_service_key = Secret.from_secret_complete_arn(
             self,
-            'PortalSecret',
+            'IndexingServiceKey',
             'arn:aws:secretsmanager:us-west-2:109189702753:secret:indexing-service-portal-key-BdNl8x',
         )
