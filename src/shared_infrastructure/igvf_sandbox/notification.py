@@ -16,7 +16,7 @@ class Notification(Construct):
             'EncodeDCCChatbot',
             'arn:aws:chatbot::920073238245:chat-configuration/slack-channel/aws-igvf-staging',
         )
-        self.alarm_notification_topic =  Topic.from_topic_arn(
+        self.alarm_notification_topic = Topic.from_topic_arn(
             self,
             'AlarmNotificationTopic',
             topic_arn='arn:aws:sns:us-west-2:920073238245:NotificationStack-AwsIgvfStagingChannelAlarmNotificationTopic8B3A43D0-siYmnBKmSAFD'
