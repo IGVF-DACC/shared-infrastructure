@@ -25,3 +25,14 @@ class PortalCredentials(Construct):
             'IndexingServiceKey',
             'arn:aws:secretsmanager:us-west-2:035226225042:secret:indexing-service-portal-key-OzEDnM',
         )
+
+
+class UploadFilesUserAccessKeys(Construct):
+
+    def __init__(self, scope: Construct, construct_id: str, **kwargs: Any) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+        self.secret = Secret.from_secret_complete_arn(
+            self,
+            'AccessKeyAndSecretAccessKey',
+            'arn:aws:secretsmanager:us-west-2:035226225042:secret:upload-igvf-files-user-access-key-secret-DBCayo',
+        )
