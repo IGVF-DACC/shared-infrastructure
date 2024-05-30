@@ -36,3 +36,14 @@ class UploadFilesUserAccessKeys(Construct):
             'AccessKeyAndSecretAccessKey',
             'arn:aws:secretsmanager:us-west-2:109189702753:secret:upload-igvf-files-user-access-key-secret-UERCA7'
         )
+
+
+class UploadRestrictedFilesUserAccessKeys(Construct):
+
+    def __init__(self, scope: Construct, construct_id: str, **kwargs: Any) -> None:
+        super().__init__(scope, construct_id, **kwargs)
+        self.secret = Secret.from_secret_complete_arn(
+            self,
+            'AccessKeyAndSecretAccessKey',
+            'arn:aws:secretsmanager:us-west-2:109189702753:secret:upload-igvf-restricted_files-user-access-key-secret-jHXmVk'
+        )
