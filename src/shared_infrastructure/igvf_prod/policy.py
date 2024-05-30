@@ -19,3 +19,13 @@ class BucketAccessPolicies(Construct):
             'UploadIgvfFilesPolicy',
             'arn:aws:iam::035226225042:policy/upload-igvf-files'
         )
+        self.download_igvf_restricted_files_policy = ManagedPolicy.from_managed_policy_arn(
+            self,
+            'DownloadIgvfRestrictedFilesPolicy',
+            'arn:aws:iam::035226225042:policy/download-igvf-restricted-files',
+        )
+        self.upload_igvf_restricted_files_policy = ManagedPolicy.from_managed_policy_arn(
+            self,
+            'UploadIgvfRestrictedFilesPolicy',
+            'arn:aws:iam::035226225042:policy/upload-igvf-restricted-files',
+        )
